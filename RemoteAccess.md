@@ -1,7 +1,7 @@
 # Remotely Connecting
----
-Written By: Nathan Dowd
 
+Written By: Nathan Dowd
+---
 
   In this tutorial, we're going to be going over how you can log into your CSE 15L account on ieng6. To start, you're going to need to look up your [CSE 15L account](https://sdacs.ucsd.edu/~icc/index.php). Log in with the first part of your ucsd email (Ex: ndowd@ucsd.edu --> ndowd), and your PID starting with an A or U. Once in take note of the three letters follwing cse15lwi23. Should look like this.
 
