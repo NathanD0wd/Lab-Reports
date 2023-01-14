@@ -15,7 +15,6 @@ If you're on Windows, you need to dowload [Git](https://gitforwindows.org/), the
 ```
 $ ssh cs15lwi23xxx@ieng6.ucsd.edu
 ```
-
 Assuming this is your first time connecting to the server, you will get a message like this.
 
 ```
@@ -24,7 +23,6 @@ The authenticity of host 'ieng6.ucsd.edu (128.54.70.227)' can't be established.
 RSA key fingerprint is SHA256:ksruYwhnYH+sySHnHAtLUHngrPEyZTDl/1x99wUQcec.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
-
 This is normal, type yes to allow the connection. Then type in your password and press enter. When you type, nothing will show onscreen, but it is being typed in. If it doesn't work, make sure you have typed it in correctly. If it still doesn't work, your password change might not have gone through, so just wait a few minutes and try again. Once you are in, your screen should look similar to this one.
 
 ![Image](https://i.paste.pics/49fe3a78a92b90c08cc4053cde0faf4c.png)
