@@ -25,7 +25,7 @@ Tester That Outputs an Error
 
 ```
 @Test
-    public void merge1() {
+    public void mergeError() {
         List<String> input1 = new ArrayList<String>();
         List<String> input2 = new ArrayList<String>();
         List<String> output1 = new ArrayList<String>();
@@ -41,8 +41,58 @@ Tester That Outputs an Error
         output1.add("e");
         output1.add("f");
         output1.add("g");
-        System.out.println( "" + input1 + input2 + output1 );
         assertEquals( output1 , ListExamples.merge(input1, input2) );
     }
   ```
   
+Tester With No Error
+  
+  ```
+@Test
+public void mergeNoError() {
+      List<String> input1 = new ArrayList<String>();
+      List<String> input2 = new ArrayList<String>();
+      List<String> output1 = new ArrayList<String>();
+      input1.add("a");
+      input2.add("b");
+      input2.add("c");
+      input1.add("e");
+      input2.add("f");
+      input1.add("g");
+      output1.add("a");
+      output1.add("b");
+      output1.add("c");
+      output1.add("e");
+      output1.add("f");
+      output1.add("g");
+      assertEquals( output1 , ListExamples.merge(input1, input2) ); 
+  }
+ ```
+    
+Code With Error
+
+```
+static List<String> merge(List<String> list1, List<String> list2) {
+    List<String> result = new ArrayList<>();
+    int index1 = 0, index2 = 0;
+    while(index1 < list1.size() && index2 < list2.size()) {
+      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
+        result.add(list1.get(index1));
+        index1 += 1;
+      }
+      else {
+        result.add(list2.get(index2));
+        index2 += 1;
+      }
+    }
+    while(index1 < list1.size()) {
+      result.add(list1.get(index1));
+      index1 += 1;
+    }
+    while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      index1 += 1;
+    }
+    return result;
+  }
+  ```
