@@ -22,8 +22,8 @@ That is how I ran a web server to take Strings and display the ones it is given 
 ## Bugs and Debugging
 
 Tester That Outputs an Error
-'''
 
+```
 @Test
     public void merge1() {
         List<String> input1 = new ArrayList<String>();
@@ -44,5 +44,5 @@ Tester That Outputs an Error
         System.out.println( "" + input1 + input2 + output1 );
         assertEquals( output1 , ListExamples.merge(input1, input2) );
     }
-  '''
+  ```
   
