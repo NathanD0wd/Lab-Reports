@@ -1,8 +1,6 @@
 # Servers and Bugs
 By: Nathan Dowd
 
----
-
 ## Web Server
 
 This week, I will be demonstrating a web server I have written. The purpose of this web server is to receive Strings and return a running list of the Strings it is given. Shown below is the code to implement this. This code implements the interface URLHandler, which was provided during CSE 15L Lab 2 and allows for the web server to work.
