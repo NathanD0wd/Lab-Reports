@@ -23,6 +23,7 @@ That is how I ran a web server to take Strings and display the ones it is given 
 
 Tester That Outputs an Error
 '''
+
 @Test
     public void merge1() {
         List<String> input1 = new ArrayList<String>();
