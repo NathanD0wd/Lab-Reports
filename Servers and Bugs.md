@@ -20,3 +20,28 @@ This example is very similar to the last one. The same method is called (StringS
 That is how I ran a web server to take Strings and display the ones it is given in a list.
 
 ## Bugs and Debugging
+
+Tester That Outputs an Error
+***
+@Test
+    public void merge1() {
+        List<String> input1 = new ArrayList<String>();
+        List<String> input2 = new ArrayList<String>();
+        List<String> output1 = new ArrayList<String>();
+        input1.add("a");
+        input2.add("b");
+        input2.add("c");
+        input1.add("e");
+        input2.add("f");
+        input2.add("g");
+        output1.add("a");
+        output1.add("b");
+        output1.add("c");
+        output1.add("e");
+        output1.add("f");
+        output1.add("g");
+        System.out.println( "" + input1 + input2 + output1 );
+        assertEquals( output1 , ListExamples.merge(input1, input2) );
+    }
+  ***
+  
