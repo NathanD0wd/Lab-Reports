@@ -119,3 +119,4 @@ static List<String> merge(List<String> list1, List<String> list2) {
   ```
   
   ## What I Learned
+In these past two labs, I have learned a lot. The thing that stood out to me most though was the connection between GitHub and our coding, more specifically VSCode. You can easily use files from GitHub in VSCode with the git clone method, and using GitHub Desktop allows you to keep track of all the changes you make within VSCode in GitHub. I have always known the purpose of GitHub was to store code and keep track of changes made to it, but I never actually understood how that worked until our lab in week 2. This will be a super useful tool in the future.
