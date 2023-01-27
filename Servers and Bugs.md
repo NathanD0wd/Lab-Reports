@@ -21,37 +21,9 @@ That is how I ran a web server to take Strings and display the ones it is given 
 
 ## Bugs and Debugging
 
-Tester That Outputs an Error
+In this section I will be discussing bugs and debugging, as the title suggests. We were given classes and methods in our lab that contained errors. The class we are focusing on is ListExamples.java and within that class is the Merge method. Below you can see the code. The purpose of this code was to merge two previously sorted lists, keeping them sorted in alphabetic order. (Ex: { a , c , d } + { b , e , f } = { a , b , c , d , e , f } )
 
-```
-@Test
-    public void mergeError() {
-        List<String> input1 = new ArrayList<String>();
-        List<String> input2 = new ArrayList<String>();
-        List<String> output1 = new ArrayList<String>();
-        input1.add("a"); input1.add("e");
-        input2.add("b"); input2.add("c"); input2.add("f"); input2.add("g");
-        output1.add("a"); output1.add("b"); output1.add("c"); output1.add("e"); output1.add("f"); output1.add("g");
-        assertEquals( output1 , ListExamples.merge(input1, input2) );
-    }
-  ```
-  
-Tester With No Error
-  
-  ```
-@Test
-public void mergeNoError() {
-      List<String> input1 = new ArrayList<String>();
-      List<String> input2 = new ArrayList<String>();
-      List<String> output1 = new ArrayList<String>();
-      input1.add("a"); input1.add("g"); input1.add("e");
-      input2.add("b"); input2.add("c"); input2.add("f");
-      output1.add("a"); output1.add("b"); output1.add("c"); output1.add("e"); output1.add("f"); output1.add("g");
-      assertEquals( output1 , ListExamples.merge(input1, input2) ); 
-  }
- ```
-    
-Code With Error
+Code With Bug
 
 ```
 static List<String> merge(List<String> list1, List<String> list2) {
@@ -78,3 +50,37 @@ static List<String> merge(List<String> list1, List<String> list2) {
     return result;
   }
   ```
+
+Here is a test method that I wrote to test the class. It creates two lists input1 = { a , e } and input 2 = { b , c , f , g }, and then attempts to merge them. The expected ouput should be: output1 = { a , b , c , e , f, g }.
+Tester That Outputs an Error
+
+```
+@Test
+    public void mergeError() {
+        List<String> input1 = new ArrayList<String>();
+        List<String> input2 = new ArrayList<String>();
+        List<String> output1 = new ArrayList<String>();
+        input1.add("a"); input1.add("e");
+        input2.add("b"); input2.add("c"); input2.add("f"); input2.add("g");
+        output1.add("a"); output1.add("b"); output1.add("c"); output1.add("e"); output1.add("f"); output1.add("g");
+        assertEquals( output1 , ListExamples.merge(input1, input2) );
+    }
+  ```
+  
+Here is another test method. It creates two lists input1 = { a , g , e } and input 2 = { b , c , f ,}, and then attempts to merge them. The expected ouput should be: output1 = { a , b , c , e , f, g }.
+Tester With No Error
+  
+  ```
+@Test
+public void mergeNoError() {
+      List<String> input1 = new ArrayList<String>();
+      List<String> input2 = new ArrayList<String>();
+      List<String> output1 = new ArrayList<String>();
+      input1.add("a"); input1.add("g"); input1.add("e");
+      input2.add("b"); input2.add("c"); input2.add("f");
+      output1.add("a"); output1.add("b"); output1.add("c"); output1.add("e"); output1.add("f"); output1.add("g");
+      assertEquals( output1 , ListExamples.merge(input1, input2) ); 
+  }
+ ```
+    
+When we run these tests we get one error and one successful test.
