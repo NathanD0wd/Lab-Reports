@@ -52,7 +52,8 @@ static List<String> merge(List<String> list1, List<String> list2) {
   ```
 
 Here is a test method that I wrote to test the class. It creates two lists input1 = { a , e } and input 2 = { b , c , f , g }, and then attempts to merge them. The expected ouput should be: output1 = { a , b , c , e , f, g }.
-Tester That Outputs an Error
+
+Tester With Error
 
 ```
 @Test
@@ -68,6 +69,7 @@ Tester That Outputs an Error
   ```
   
 Here is another test method. It creates two lists input1 = { a , g , e } and input 2 = { b , c , f ,}, and then attempts to merge them. The expected ouput should be: output1 = { a , b , c , e , f, g }.
+
 Tester With No Error
   
   ```
@@ -83,4 +85,37 @@ public void mergeNoError() {
   }
  ```
     
-When we run these tests we get one error and one successful test.
+When we run these tests we get one error and one successful test. As you can see below. mergeNoError runs with no error, producing the output expected that we stated above. MergeError, however, runs into an infinite loop and exits without completing.
+
+![Image](Errors.png)
+
+The bug is within the last while loop in the code. This loop will happen if there are more elements in list2 than in list1. The first while loop will iterate through both lists until it reached the end of one. It updates index1 and index2 as it goes. However, when it enters the last loop, it updates index1 while going through list2. Then in the while loop if statement, it compared index2 < list2.size(). Since index2 is never increased in the loop, that statement always returns true, so the list continues to run and results in an infinite loop. To fix this, we change the inside of the loop to iterate index2 instead of index1. Below you can see the new code with no bugs.
+
+Code Without Bug
+```
+static List<String> merge(List<String> list1, List<String> list2) {
+    List<String> result = new ArrayList<>();
+    int index1 = 0, index2 = 0;
+    while(index1 < list1.size() && index2 < list2.size()) {
+      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
+        result.add(list1.get(index1));
+        index1 += 1;
+      }
+      else {
+        result.add(list2.get(index2));
+        index2 += 1;
+      }
+    }
+    while(index1 < list1.size()) {
+      result.add(list1.get(index1));
+      index1 += 1;
+    }
+    while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      index2 += 1;
+    }
+    return result;
+  }
+  ```
+  
+  ## What I Learned
