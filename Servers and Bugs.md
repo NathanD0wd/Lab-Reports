@@ -51,7 +51,7 @@ static List<String> merge(List<String> list1, List<String> list2) {
   }
   ```
 
-Here is a test method that I wrote to test the class. It creates two lists input1 = { a , e } and input 2 = { b , c , f , g }, and then attempts to merge them. The expected ouput should be: output1 = { a , b , c , e , f, g }.
+Here is a test method that I wrote to test the class. It creates two lists input1 = { "a" , "e" } and input2 = { "b" , "c" , "f" , "g" }, and then attempts to merge them. The expected ouput should be: output1 = { "a" , "b" , "c" , "e" , "f" , "g" }.
 
 Tester With Error
 
@@ -68,11 +68,11 @@ Tester With Error
     }
   ```
   
-Here is another test method. It creates two lists input1 = { a , g , e } and input 2 = { b , c , f ,}, and then attempts to merge them. The expected ouput should be: output1 = { a , b , c , e , f, g }.
+Here is another test method. It creates two lists input1 = { "a" , "g" , "e" } and input2 = { "b" , "c" , "f" }, and then attempts to merge them. The expected ouput should be: output1 = { "a" , "b" , "c" , "e" , "f" , "g" }.
 
 Tester With No Error
   
-  ```
+```
 @Test
 public void mergeNoError() {
       List<String> input1 = new ArrayList<String>();
@@ -89,7 +89,7 @@ When we run these tests we get one error and one successful test. As you can see
 
 ![Image](Errors.png)
 
-The bug is within the last while loop in the code. This loop will happen if there are more elements in list2 than in list1. The first while loop will iterate through both lists until it reached the end of one. It updates index1 and index2 as it goes. However, when it enters the last loop, it updates index1 while going through list2. Then in the while loop if statement, it compared index2 < list2.size(). Since index2 is never increased in the loop, that statement always returns true, so the list continues to run and results in an infinite loop. To fix this, we change the inside of the loop to iterate index2 instead of index1. Below you can see the new code with no bugs.
+The bug is within the last while loop in the code. This loop will happen if there are more elements in list2 than in list1. The first while loop will iterate through both lists until it reached the end of either list1 or list2. As it goes it updates index1 and index2 as it adds from either list into result. If it reaches the end of list1 before it reaches the end of list2, it will run the last loop as index2 would not have reached list2.size(). However, when it runs the contents of the last loop, it updates index1 while going through list2. Then, in the while loop if statement, it compares index2 < list2.size(). Since index2 is never increased in the loop, that statement always returns true, so the list continues to run and results in an infinite loop. To fix this, we change the inside of the loop to iterate index2 instead of index1. Below you can see the new code with no bugs.
 
 Code Without Bug
 ```
@@ -118,5 +118,5 @@ static List<String> merge(List<String> list1, List<String> list2) {
   }
   ```
   
-  ## What I Learned
+## What I Learned
 In these past two labs, I have learned a lot. The thing that stood out to me most though was the connection between GitHub and our coding, more specifically VSCode. You can easily use files from GitHub in VSCode with the git clone method, and using GitHub Desktop allows you to keep track of all the changes you make within VSCode in GitHub. I have always known the purpose of GitHub was to store code and keep track of changes made to it, but I never actually understood how that worked until our lab in week 2. This will be a super useful tool in the future.
