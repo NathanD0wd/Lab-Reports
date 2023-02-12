@@ -25,7 +25,7 @@ their cargoes of South American gold. As for the *Lucayans*, within 25 years all
 — in Spanish gold mines and on farms and pearl fisheries on Hispaniola (Haiti), Cuba, and elsewhere in the Caribbean.
 ```
 
-In this example, we can see that we were searching for the word 'lucayan'. But the results we got contained the word 'Lucayans'. This is because '-i' made grep ignore the case of the characters and returned any 'lucayans' it found.
+In this example, we can see that we were searching for the word 'lucayans'. But the results we got contained the word 'Lucayans'. This is because '-i' made grep ignore the case of the characters and returned any 'lucayans' it found.
 
 ```
 [cs15lwi23ati@ieng6-202]:skill-demo1-data:326$ grep -r -i 'whoever'
@@ -102,3 +102,42 @@ Now we are searching for 'the' in the file WhereToItaly.txt. However, as you can
 In this, we are searching how many times 'e' shows up in lines in WhereToItaly.txt. This command is very useful as it shows you how many times it appears without filling your screen with all 4,000 lines of output. When searching for words that are very common in large files or directories, this is nice so you aren't overwhelmed with output.
 
 Last, but not least, we will be using '-o'. This prints only the matching part of the line containing the word you are searching for.
+
+```
+[cs15lwi23ati@ieng6-202]:skill-demo1-data:348$ grep -o -r 'Lucayans'
+written_2/travel_guides/berlitz2/Bahamas-History.txt:Lucayans
+written_2/travel_guides/berlitz2/Bahamas-History.txt:Lucayans
+```
+
+We can see that this command is very similar to one I used in an earlier example. But this time, the output is so much neater. Only the word we are searching for is shown, and we can see it appears twice in Bahamas-History.txt.
+
+```
+[cs15lwi23ati@ieng6-202]:skill-demo1-data:350$ grep -o -r 'beans'
+written_2/non-fiction/OUP/Castro/chB.txt:beans
+written_2/non-fiction/OUP/Castro/chB.txt:beans
+written_2/non-fiction/OUP/Castro/chO.txt:beans
+written_2/non-fiction/OUP/Castro/chP.txt:beans
+written_2/travel_guides/berlitz1/WhatToIbiza.txt:beans
+written_2/travel_guides/berlitz1/WhatToIbiza.txt:beans
+written_2/travel_guides/berlitz1/WhatToIbiza.txt:beans
+written_2/travel_guides/berlitz1/WhatToIstanbul.txt:beans
+written_2/travel_guides/berlitz1/WhatToItaly.txt:beans
+written_2/travel_guides/berlitz1/WhatToJamaica.txt:beans
+written_2/travel_guides/berlitz1/WhatToJamaica.txt:beans
+written_2/travel_guides/berlitz1/WhatToJapan.txt:beans
+written_2/travel_guides/berlitz1/WhereToLosAngeles.txt:beans
+written_2/travel_guides/berlitz2/Bali-WhereToGo.txt:beans
+written_2/travel_guides/berlitz2/Canada-History.txt:beans
+written_2/travel_guides/berlitz2/Cancun-History.txt:beans
+written_2/travel_guides/berlitz2/CostaBlanca-WhatToDo.txt:beans
+written_2/travel_guides/berlitz2/CostaBlanca-WhatToDo.txt:beans
+written_2/travel_guides/berlitz2/Cuba-WhereToGo.txt:beans
+written_2/travel_guides/berlitz2/PuertoRico-WhereToGo.txt:beans
+written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt:beans
+```
+
+Now, I'm searching for all the times 'beans' shows up in written-2/. As you can see, the -o command is invaluable for helping you locate which files contain the word 'beans', which is life-changing information. You could also use it for other things, but usually just to find 'beans'.
+
+Thanks for joining me again on my biweekly blog:). Hope you learned something valuable.
+
+-Nathan
