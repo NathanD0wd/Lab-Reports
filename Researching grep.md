@@ -4,7 +4,7 @@ Written By: Nathan Dowd
 
 ---
 
-Hey guys, and welcome back to my blog. This week we're gonna be looking at the grep command. In particular, we'll be diving into the additional commands you can add on to grep and what each of them do. To start, I asked ChatGPT, "What are all the additional commands grep has?" This gave me a list of ten add-ons that can change how output is displayed by grep. We're only gonna be looking at four of these though. Those being: '-i' or '--ignore-case' , '-v' or '--invert-match' , '-c' or '--count' , and '-o' or '--only-matching'. We will also be using the '-r' command, but not as one of our four examples. We are just using this to recursively search through all the files in our directory so we don't have to list which ones we would like to search. The directory we will be searching is this [GitHub Page](https://github.com/ucsd-cse15l-w23/skill-demo1-data), which contains the written-2/ directory, which in turn contains many more files.
+Hey guys, and welcome back to my blog. This week we're gonna be looking at the grep command. In particular, we'll be diving into the additional commands you can add on to grep and what each of them do. To start, I asked [ChatGPT](https://chat.openai.com/chat), "What are all the additional commands grep has?" This gave me a list of ten add-ons that can change how output is displayed by grep. We're only gonna be looking at four of these though. Those being: '-i' or '--ignore-case' , '-v' or '--invert-match' , '-c' or '--count' , and '-o' or '--only-matching'. We will also be using the '-r' command, but not as one of our four examples. We are just using this to recursively search through all the files in our directory so we don't have to list which ones we would like to search. The directory we will be searching is this [GitHub Page](https://github.com/ucsd-cse15l-w23/skill-demo1-data), which contains the written-2/ directory, which in turn contains many more files.
 
 In the following examples I will be adding an asterisk on each side of the search word to help you see where it was found in the text.
 
@@ -57,3 +57,48 @@ and miscounted — there are in fact 103.
 
 In this example, I was searching for the word 'whoever'. If I had not used '-i', several results would have been left out. This command is useful for if you aren't sure whether or not a word is capatilized or to find all cases of common words, even if they are capitalized at the start of a sentence.
 
+Now, lets look at '-v'. This command returns the results without the given string. For this, we will not be using the '-r' command.
+
+```
+[cs15lwi23ati@ieng6-202]:skill-demo1-data:336$ grep -v 'the'  written_2/travel_guides/berlitz1/HandRIbiza.txt
+
+        Recommended Hotels
+        The establishments listed below offer a cross-section of
+        island comes with chips (french fries).
+        offfical government rating system.
+        expect to pay for a three-course meal for two, excluding wine, tax and
+        ✪less than 5,000 ptas.
+        ✪✪5,000–8,000 ptas.
+        ✪✪✪more than 8,000 ptas.
+```
+
+In this, we are searching the file HandRIbiza.txt for lines that do not contain 'the'. As you can see 'The' is still included, but not any 'the'.
+
+```
+[cs15lwi23ati@ieng6-202]:skill-demo1-data:338$ grep -v 'c' written_2/non-fiction/OUP/Castro/chY.txt
+
+Yard Shrines
+Yardas (Gardens)
+Yo Soy Joaquin
+See I Am Joaquin/Yo Soy Joaquin
+```
+
+Now, we are searching the Castro/chY.txt file for lines without the character 'c'. This command can be very useful for a number of reasons. If you mark certain lines or files with a certain symbol to mark them as checked/completed, you could use this command on that symbol to see the remaining lines.
+
+Now lets look at the '-c' command. This prints a count of the lines that match your search.
+
+```
+[cs15lwi23ati@ieng6-202]:skill-demo1-data:345$ grep -c 'the'  written_2/travel_guides/berlitz1/WhereToItaly.txt
+2684
+```
+
+Now we are searching for 'the' in the file WhereToItaly.txt. However, as you can see by the result, only the amount of times 'the' shows up in a line is shown.
+
+```
+[cs15lwi23ati@ieng6-202]:skill-demo1-data:346$ grep -c 'e'  written_2/travel_guides/berlitz1/WhereToItaly.txt
+4067
+```
+
+In this, we are searching how many times 'e' shows up in lines in WhereToItaly.txt. This command is very useful as it shows you how many times it appears without filling your screen with all 4,000 lines of output. When searching for words that are very common in large files or directories, this is nice so you aren't overwhelmed with output.
+
+Last, but not least, we will be using '-o'. This prints only the matching part of the line containing the word you are searching for.
