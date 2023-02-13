@@ -12,52 +12,74 @@ To start, lets look at '-i'. This command tells grep to search for the specified
 
 ```
 [cs15lwi23ati@ieng6-202]:skill-demo1-data:319$ grep -r -i 'lucayans'
-written_2/travel_guides/berlitz2/Bahamas-History.txt:Centuries before the arrival of Columbus, a peaceful Amerindian people who 
-called themselves the Luccucairi had settled in the Bahamas. Originally from South America, they had traveled up through the 
-Caribbean islands, surviving by cultivating modest crops and from what they caught from sea and shore. Nothing in the experience 
-of these gentle people could have prepared them for the arrival of the Pinta, the Niña, and the Santa Maria at San Salvador on 
-12 October 1492. Columbus believed that he had reached the East Indies and mistakenly called these people Indians. 
-We know them today as the *Lucayans*. Columbus claimed the island and others in the Bahamas for his royal Spanish patrons, but 
-not finding the gold and other riches he was seeking, he stayed for only two weeks before sailing towards Cuba.
-written_2/travel_guides/berlitz2/Bahamas-History.txt:The Spaniards never bothered to settle in the Bahamas, but the number of 
-shipwrecks attest that their galleons frequently passed through the archipelago en route to and from the Caribbean, Florida, Bermuda, 
-and their home ports. On Eleuthera the explorers dug a fresh-water well —at a spot now known as “Spanish Wells” — which was used to 
-replenish the supplies of water on their ships before they began the long journey back to Europe with their cargoes of South American 
-gold. As for the *Lucayans*, within 25 years all of them, perhaps some 30,000 people, were removed from the Bahamas to work — and die 
-— in Spanish gold mines and on farms and pearl fisheries on Hispaniola (Haiti), Cuba, and elsewhere in the Caribbean.
+written_2/travel_guides/berlitz2/Bahamas-History.txt:Centuries before the arrival of 
+Columbus, a peaceful Amerindian people who called themselves the Luccucairi had settled 
+in the Bahamas. Originally from South America, they had traveled up through the 
+Caribbean islands, surviving by cultivating modest crops and from what they caught 
+from sea and shore. Nothing in the experience of these gentle people could have prepared 
+them for the arrival of the Pinta, the Niña, and the Santa Maria at San Salvador on 
+12 October 1492. Columbus believed that he had reached the East Indies and mistakenly 
+called these people Indians. We know them today as the *Lucayans*. Columbus claimed the 
+island and others in the Bahamas for his royal Spanish patrons, but not finding the gold 
+and other riches he was seeking, he stayed for only two weeks before sailing towards Cuba.
+written_2/travel_guides/berlitz2/Bahamas-History.txt:The Spaniards never bothered to settle 
+in the Bahamas, but the number of shipwrecks attest that their galleons frequently passed 
+through the archipelago en route to and from the Caribbean, Florida, Bermuda, and their home 
+ports. On Eleuthera the explorers dug a fresh-water well —at a spot now known as “Spanish 
+Wells” — which was used to replenish the supplies of water on their ships before they began 
+the long journey back to Europe with their cargoes of South American gold. As for the 
+*Lucayans*, within 25 years all of them, perhaps some 30,000 people, were removed from the 
+Bahamas to work — and die — in Spanish gold mines and on farms and pearl fisheries on 
+Hispaniola (Haiti), Cuba, and elsewhere in the Caribbean.
 ```
 
 In this example, we can see that we were searching for the word 'lucayans'. But the results we got contained the word 'Lucayans'. This is because '-i' made grep ignore the case of the characters and returned any 'lucayans' it found.
 
 ```
 [cs15lwi23ati@ieng6-202]:skill-demo1-data:326$ grep -r -i 'whoever'
-written_2/non-fiction/OUP/Fletcher/ch5.txt:*Whoever* sheds man’s blood by man shall his blood be shed;
-written_2/non-fiction/OUP/Fletcher/ch6.txt:If the analogy with common law monopolies had held, the second problem would then have 
-consisted of transplanting the English practice of invalidating statutes simply because they violated, as Edward Coke said in 
-another leading case, “common right or reason.”15 There was no evidence that courts in the United States would or could invalidate 
-statutes simply because they violated the “common law.” The Supreme Court never took this attack on the Louisiana statute seriously. 
-It interpreted Coke’s decision in the Case of Monopolies to be about whether the king could grant a monopoly. Coke supposedly took 
-the side of the Commons against the king, but left open the question whether parliament could grant monopolies. The impermissibility 
-of the statute is dismissed with the rhetorical question: “*Whoever* doubted the authority of Parliament to change or modify the 
-common law?”16 The notion of legislative power to regulate the economy prevailed. The elected representatives of the people enjoyed 
-wide-ranging discretion in the legislature to enact measures that had at least the nominal purpose of promoting the public good.
-written_2/travel_guides/berlitz1/HistoryMadeira.txt:        *Whoever* first stepped ashore on Madeira discovered no signs
-written_2/travel_guides/berlitz2/Athens-History.txt:In ancient Greek mythology Athens is named following a contest between Athena, 
-goddess of wisdom, and Poseidon, god of the sea. Both had their eye on the prize real estate, so it was agreed that *whoever* 
-could come up with the more useful gift for mortals would win. The half-human, half-serpent king of Athens, Cecrops, acted as arbiter. 
-written_2/travel_guides/berlitz2/PuertoRico-WhereToGo.txt:Next to the fort is the pretty Legislature building with a classical façade 
-painted bright lime green. Finished in 1874, the building was originally used as a barracks for troops based at the fort. Behind the 
-fort and the Vendors Plaza is Emancipation Park, perhaps the one place in town where you can sit in the shade of the trees and enjoy 
-the cooling sea breeze after your sightseeing and shopping. The park was named to commemorate the freeing of the slaves in 1848. 
-Across Tolbod Gade is the Tourist Information Office, where you can pick up maps and other information. On the northern corner of
-Tolbod Gade is the main post office. Make your way in that direction, but don’t be tempted to turn right and head for the stores just 
-yet. Take the steps to Kongens Gade, which is the street behind the Lutheran Church. The steps climb onto the steep hill that has many 
-of the oldest and most important buildings of Danish Charlotte Amalie. The family houses of the merchants and civil servants where 
-built high on this rise — named Government Hill — to take advantage of the cooling breeze. Kongens Gade itself has several buildings 
-dating back to the late 18th and early 19th centuries. Hotel 1829, named for the year in which it was built, sits amid other fine
-homes. Walk past Hotel 1829 and pause at the steps beside it, which climb higher onto Government Hill. These are the 99 Steps, one of 
-a series built by the Danes in the mid 1700s to allow pedestrian access to the town below. The 99 Steps are the longest in town, but 
-*whoever* named the flight must have become tired toward the end and miscounted — there are in fact 103.
+written_2/non-fiction/OUP/Fletcher/ch5.txt:*Whoever* sheds man’s blood by man shall 
+his blood be shed;
+written_2/non-fiction/OUP/Fletcher/ch6.txt:If the analogy with common law monopolies 
+had held, the second problem would then have consisted of transplanting the English 
+practice of invalidating statutes simply because they violated, as Edward Coke said in 
+another leading case, “common right or reason.”15 There was no evidence that courts in 
+the United States would or could invalidate statutes simply because they violated the 
+“common law.” The Supreme Court never took this attack on the Louisiana statute seriously. 
+It interpreted Coke’s decision in the Case of Monopolies to be about whether the king 
+could grant a monopoly. Coke supposedly took the side of the Commons against the king, 
+but left open the question whether parliament could grant monopolies. The impermissibility 
+of the statute is dismissed with the rhetorical question: “*Whoever* doubted the authority 
+of Parliament to change or modify the common law?”16 The notion of legislative power to 
+regulate the economy prevailed. The elected representatives of the people enjoyed 
+wide-ranging discretion in the legislature to enact measures that had at least the nominal 
+purpose of promoting the public good.
+written_2/travel_guides/berlitz1/HistoryMadeira.txt:*Whoever* first stepped ashore on 
+Madeira discovered no signs
+written_2/travel_guides/berlitz2/Athens-History.txt:In ancient Greek mythology Athens is 
+named following a contest between Athena, goddess of wisdom, and Poseidon, god of the sea. 
+Both had their eye on the prize real estate, so it was agreed that *whoever* could come 
+up with the more useful gift for mortals would win. The half-human, half-serpent king of 
+Athens, Cecrops, acted as arbiter. 
+written_2/travel_guides/berlitz2/PuertoRico-WhereToGo.txt:Next to the fort is the pretty 
+Legislature building with a classical façade painted bright lime green. Finished in 1874, 
+the building was originally used as a barracks for troops based at the fort. Behind the 
+fort and the Vendors Plaza is Emancipation Park, perhaps the one place in town where you 
+can sit in the shade of the trees and enjoy the cooling sea breeze after your sightseeing 
+and shopping. The park was named to commemorate the freeing of the slaves in 1848. Across 
+Tolbod Gade is the Tourist Information Office, where you can pick up maps and other 
+information. On the northern corner of Tolbod Gade is the main post office. Make your way 
+in that direction, but don’t be tempted to turn right and head for the stores just 
+yet. Take the steps to Kongens Gade, which is the street behind the Lutheran Church. 
+The steps climb onto the steep hill that has many of the oldest and most important 
+buildings of Danish Charlotte Amalie. The family houses of the merchants and civil 
+servants where built high on this rise — named Government Hill — to take advantage of 
+the cooling breeze. Kongens Gade itself has several buildings dating back to the late 18th 
+and early 19th centuries. Hotel 1829, named for the year in which it was built, sits amid 
+other fine homes. Walk past Hotel 1829 and pause at the steps beside it, which climb higher 
+onto Government Hill. These are the 99 Steps, one of a series built by the Danes in the mid 
+1700s to allow pedestrian access to the town below. The 99 Steps are the longest in town, 
+but *whoever* named the flight must have become tired toward the end and miscounted — 
+there are in fact 103.
 ```
 
 In this example, I was searching for the word 'whoever'. If I had not used '-i', several results would have been left out. This command is useful for if you aren't sure whether or not a word is capatilized or to find all cases of common words, even if they are capitalized at the start of a sentence.
@@ -65,7 +87,7 @@ In this example, I was searching for the word 'whoever'. If I had not used '-i',
 Now, lets look at '-v'. This command returns the results without the given string. For this, we will not be using the '-r' command.
 
 ```
-[cs15lwi23ati@ieng6-202]:skill-demo1-data:336$ grep -v 'the'  written_2/travel_guides/berlitz1/HandRIbiza.txt
+[cs15lwi23ati@ieng6-202]:skill-demo1-data:336$ grep -v 'the' written_2/travel_guides/berlitz1/HandRIbiza.txt
 
         Recommended Hotels
         The establishments listed below offer a cross-section of
@@ -93,14 +115,14 @@ Now, we are searching the Castro/chY.txt file for lines without the character 'c
 Now lets look at the '-c' command. This prints a count of the lines that match your search.
 
 ```
-[cs15lwi23ati@ieng6-202]:skill-demo1-data:345$ grep -c 'the'  written_2/travel_guides/berlitz1/WhereToItaly.txt
+[cs15lwi23ati@ieng6-202]:skill-demo1-data:345$ grep -c 'the' written_2/travel_guides/berlitz1/WhereToItaly.txt
 2684
 ```
 
 Now we are searching for 'the' in the file WhereToItaly.txt. However, as you can see by the result, only the amount of times 'the' shows up in a line is shown.
 
 ```
-[cs15lwi23ati@ieng6-202]:skill-demo1-data:346$ grep -c 'e'  written_2/travel_guides/berlitz1/WhereToItaly.txt
+[cs15lwi23ati@ieng6-202]:skill-demo1-data:346$ grep -c 'e' written_2/travel_guides/berlitz1/WhereToItaly.txt
 4067
 ```
 
