@@ -1,3 +1,9 @@
+#Lab Competition
+
+Written By: Nathan Dowd
+
+---
+
 Welcome back to my CSE 15L blog everyone! This week in our lab we did a speed competition in the command line. We had to log into our ieng6 account, then clone into a java repository containing a bugged java file and a tester for it. Once in, we had to run the tests to show it was broken, then correct the bug, rerun the tester, and push and commit our changes back to the git repository.
 
 First we had to log into our ieng6 account. We previously set this up to bypass our password to speed up the process. Since I had been doing these tasks repeatedly, it was my most recent command.
