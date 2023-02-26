@@ -1,4 +1,4 @@
-#Lab Competition
+# Lab Competition
 
 Written By: Nathan Dowd
 
