@@ -2,7 +2,8 @@ Welcome back to my CSE 15L blog everyone! This week in our lab we did a speed co
 
 First we had to log into our ieng6 account. We previously set this up to bypass our password to speed up the process. Since I had been doing these tasks repeatedly, it was my most recent command.
 
-Keys Pressed: <up><enter>
+Keys Pressed: `<up><enter>`
+
 ![Image](ssh.png)
 	
 git clone git@github.com:NathanD0wd/lab7
