@@ -10,7 +10,7 @@ Hello everyone, and welcome back to my CSE 15L blog. This is gonna be my final p
 
 Now let me tell you how I made it. Within the website I used every tool available in markdown. First the title. I used the # symbol to make it large. Afterwards, I added a horizontal line to seperate the title from the message with ---. The disclaimer uses ## for a slightly smaller title, followed by lines enclosed with three backticks to place them in a code block. For the pictures I added, I used the format of `![Image](link)`. I have to use inline code blocks to make it show up correctly. Simalarly for the links, I used `[Text to display](Link)`. The list was simply adding 1. in front of my quotes. The block quote was attained using > . For bolded text you enclose the text with **two asterisks**, and for italics with *one asterisk*. I do believe that is all of the methods available in markdown, aside from bullet points. Those are simply adding a * or - in front of your line.
 
-![Image](birdmd1.png)
+![Image](Birdmd1.png)
 
 ![Image](birdmd2.png)
 
