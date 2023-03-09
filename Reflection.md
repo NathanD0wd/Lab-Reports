@@ -48,16 +48,6 @@ P.S. I just asked ChatGPT to make an ASCII image of a hand doing a peace sign an
 ```
 
 ```
-   /¯/|    
-  |    |    
-  |    |    
-  |    |\   
-  |    | \  
- (     ¯¯) 
-  \¯¯¯¯¯¯/  
-```
-
-```
      //
     //
    //
@@ -66,11 +56,6 @@ P.S. I just asked ChatGPT to make an ASCII image of a hand doing a peace sign an
 ((_________________
 \_________________/  peace!
 ```
-
-
-
-
-
 
 Okay but here's a good one from the internet.
 
