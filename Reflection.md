@@ -12,7 +12,7 @@ Now let me tell you how I made it. Within the website I used every tool availabl
 
 ![Image](Birdmd1.png)
 
-![Image](birdmd2.png)
+![Image](birdmd3.png)
 
 Making this website was super enjoyable, and with the knowledge I gained in lab 1, I can now whip up a simple website in no time. This is definitely something I will be using in the future, just for fun. I would also like to mention that I used ChatGPT to help with this site, and have also been using it a lot in general. I got introduced to it in this class, and I have been really enjoying experimenting with it. Earlier today, I discovered that it's not very good at tic tac toe or twenty questions. I would highly recomment trying to play with it sometime.
 
